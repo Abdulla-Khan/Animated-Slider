@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));
@@ -35,13 +35,13 @@ class _HomePageState extends State<HomePage> {
           SafeArea(
               child: Container(
             width: 200,
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Column(
               children: [
                 DrawerHeader(
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                       CircleAvatar(
                         radius: 50,
                         backgroundImage: NetworkImage(
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           )),
           TweenAnimationBuilder(
               tween: Tween<double>(begin: 0, end: value),
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.easeInExpo,
               builder: (_, double val, __) {
                 return (Transform(
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     ..rotateY((pi / 6) * value),
                   child: Scaffold(
                     appBar: AppBar(
-                      title: Text("3D Drawer Menu"),
+                      title: const Text("3D Drawer Menu"),
                     ),
                     body: const Center(
                       child: Text('Swipe Right'),
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
       ),
       title: Text(
         txt,
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
       ),
     );
   }
